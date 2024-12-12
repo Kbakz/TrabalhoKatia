@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import React from 'react';
 import { Button, ImageBackground, StyleSheet, Text, TextInput, View } from 'react-native';
-const imageHeader = {uri: 'https://www.creativefabrica.com/wp-content/uploads/2022/10/13/Blue-curve-wave-abstract-design-bg-Graphics-41439498-2-580x387.png'}
-// const imageBottom = {uri: {Wave}}
 
 export default function Login() {
 const [usuario, setUsuario] = useState('');
@@ -10,14 +8,11 @@ const [senha, setSenha] = useState('');
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <ImageBackground source={imageHeader} style={styles.imageHeader}></ImageBackground>
-      </View>
       <View style={styles.formContainer}>
         <Text style={styles.titulo}>faça seu login</Text>
 
         <View style={styles.formSingle}>
-          <Text style={styles.textForm}>Usuário</Text>
+          <Text style={styles.textForm}>Usuário:</Text>
           <TextInput
             value={usuario}
             style={styles.input}
@@ -26,7 +21,7 @@ const [senha, setSenha] = useState('');
         </View>
         
         <View style={styles.formSingle}>
-          <Text style={styles.textForm}>Senha</Text>
+          <Text style={styles.textForm}>Senha:</Text>
           <TextInput
             value={senha}
             style={styles.input}
@@ -34,10 +29,10 @@ const [senha, setSenha] = useState('');
           />
         </View>
 
-        <Button title='ENTRAR' />
-      </View>
-      <View style={styles.bottom}>
-        <ImageBackground source={imageHeader} style={styles.imageHeader}></ImageBackground>
+        <Button 
+          title='ENTRAR' 
+          color="#B732E7"  
+        />
       </View>
     </View>
   );
@@ -48,18 +43,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  header:{
-    width: '100%',
-    height: 100,
-    backgroundColor: '#ff000077',
-    transform: 'rotate(180deg)'
-  },
-  imageHeader:{
-    flex: 1,
     justifyContent: 'center',
-    
   },
   formContainer:{
     textAlign: 'center',
@@ -73,7 +57,7 @@ const styles = StyleSheet.create({
   },
   textForm:{
     fontSize: 25,
-    textAlign: 'center'
+    paddingLeft: 15,
   },
   input:{
     fontSize: 20,
@@ -94,10 +78,5 @@ const styles = StyleSheet.create({
   },
   btn:{
     backgroundColor: 'green'
-  },
-  bottom:{
-    width: '100%',
-    height: 300,
-    backgroundColor: '#ff000077',
   }
 });
