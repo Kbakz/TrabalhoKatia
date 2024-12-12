@@ -53,6 +53,10 @@ const [quantidade, setQuantidade] = useState('')
         
         <Button title='ENTRAR' />
       </View>
+
+      <View style={styles.tableContainer}>
+        
+      </View>
     </View>
   );
 }
@@ -65,7 +69,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   formContainer:{
-    backgroundColor: '#ccc',
     textAlign: 'center',
     paddingVertical: 40,
     paddingHorizontal: 15,
@@ -76,18 +79,15 @@ const styles = StyleSheet.create({
     marginVertical: 10
   },
   textForm:{
-    color: '#fff',
-    fontSize: 25,
+    fontSize: 25
   },
   input:{
     fontSize: 20,
-    backgroundColor: '#fff',
     marginVertical: 5,
-    borderColor: '#aaa',
-    borderWidth: 2,
-    borderRadius: 10,
+    borderBottomWidth: 2,
+    borderColor: '#0f0',
     paddingLeft: 10,
-    paddingVertical: 5
+    paddingVertical: 5,
   },
   titulo:{
     fontSize: 35,
@@ -95,10 +95,13 @@ const styles = StyleSheet.create({
     color: '#3262E7',
     fontWeight:'bold',
     textAlign: 'center',
-    marginBottom: 15,
+    marginBottom: 30,
   },
   btn:{
     backgroundColor: 'green'
   },
+  tableContainer:{
+
+  }
   
 });
